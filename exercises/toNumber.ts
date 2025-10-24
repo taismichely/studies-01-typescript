@@ -4,6 +4,7 @@
 // se a função receber um string retorne numero
 // se ela receber algo diferente, retorne um erro. (throw "valor deve ser um numero")
 
+
 function toNumber(value: number | string) {
   if (typeof value === 'number') {
     return value;
