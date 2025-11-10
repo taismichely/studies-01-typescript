@@ -49,3 +49,38 @@ if (produto instanceof Livro) {
 if (produto instanceof Jogo) {
   console.log(produto.jogadores);
 }
+
+//----------------------------------------------------------
+//Iremos inserir o extends
+//Instanceof tambem confere se uma classe cosntrutora herda de outra
+
+class Veiculo {
+  marca: string;
+  tipo: string;
+  constructor(marca: string, tipo: string) {
+    this.marca = marca;
+    this.tipo = tipo;
+  }
+}
+
+class Carro extends Veiculo {
+  rodas: number;
+  constructor(marca: string, tipo: string, rodas: number) {
+    super(marca, tipo);
+    this.rodas = rodas;
+  }
+}
+
+class Moto extends Veiculo {
+  cor: string;
+  constructor(marca: string, tipo: string, cor: string) {
+    super(marca, tipo);
+    this.cor = cor;
+  }
+}
+
+const veiculo = new Carro("Citroen", "Carro", 4);
+
+if (veiculo instanceof Veiculo) {
+  console.log(veiculo.marca);
+}
